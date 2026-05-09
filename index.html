@@ -7,51 +7,83 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
-        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Lightened Safari Background */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #dbc9af; /* Off-white/Sand */
+            color: #2d2d2d; 
+        }
+        
+        /* Darker, solid expertise box with a subtle earthy tint */
+        .content-card { 
+            background: #575448; /* Deep Charcoal-Khaki */
+            border: 1px solid #1a1c18;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* High-contrast Khaki Gradient */
+        .gradient-text { 
+            background: linear-gradient(90deg, #786c44, #4a5d4e); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        .logo-container {
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+        }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-6">
 
     <main class="max-w-4xl w-full space-y-8">
-        <header class="text-center space-y-4">
-            <h1 class="text-5xl font-bold tracking-tight">Duma <span class="gradient-text">Tech</span></h1>
-            <p class="text-xl text-slate-400 font-light max-w-2xl mx-auto">
-                Senior Systems Engineer & Full-Stack Developer with 25+ years of experience in architecture, data engineering, and scalable solutions.
-            </p>
+        <header class="text-center space-y-6">
+            <!-- Logo -->
+            <div class="flex justify-center logo-container">
+                <img src="logo.png" alt="Duma Tech Logo" class="h-40 w-auto opacity-95">
+            </div>
+            
+            <div class="space-y-2">
+                <h1 class="text-5xl font-bold tracking-tight text-[#433d35]"><span class="gradient-text">Duma Tech</span></h1>
+                <p class="text-xl text-[#7a7267] font-light max-w-2xl mx-auto">
+                    Senior Systems Engineer & Full-Stack Developer with 25+ years of experience in architecture, data engineering, and scalable solutions.
+                </p>
+            </div>
         </header>
 
-        <div class="glass rounded-2xl p-8 md:p-12 shadow-2xl">
+        <!-- Darkened Expertise / Connect Box -->
+        <div class="content-card rounded-3xl p-8 md:p-12 text-[#e2e2da]">
             <div class="grid md:grid-cols-2 gap-12">
                 
+                <!-- Core Expertise -->
                 <div class="space-y-6">
-                    <h2 class="text-2xl font-semibold border-b border-slate-700 pb-2">Core Expertise</h2>
+                    <h2 class="text-2xl font-semibold border-b border-[#43453b] pb-2 text-[#d4d4c7]">Core Expertise</h2>
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3">
-                            <span class="text-sky-400">▹</span> Computer Systems Engineering
+                            <span class="text-[#c5b358]">▹</span> Computer Systems Engineering
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="text-sky-400">▹</span> Full-Stack Development (TS / Node / React)
+                            <span class="text-[#c5b358]">▹</span> Full-Stack Development (TS / Node / React)
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="text-sky-400">▹</span> Database Administration & Data Engineering
+                            <span class="text-[#c5b358]">▹</span> Database Administration & Data Engineering
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="text-sky-400">▹</span> Linux Server Management & DevOps
+                            <span class="text-[#c5b358]">▹</span> Linux Server Management & DevOps
                         </li>
                     </ul>
                 </div>
 
+                <!-- Contact/Links -->
                 <div class="space-y-6">
-                    <h2 class="text-2xl font-semibold border-b border-slate-700 pb-2">Connect</h2>
+                    <h2 class="text-2xl font-semibold border-b border-[#43453b] pb-2 text-[#d4d4c7]">Connect</h2>
                     <div class="flex flex-col gap-4">
-                        <a href="mailto:orangewedding@gmail.com" class="hover:text-sky-400 transition-colors flex items-center gap-3">
-                            <span>✉</span> orangewedding@gmail.com
+                        <a href="mailto:orangewedding@gmail.com" class="hover:text-[#c5b358] transition-colors flex items-center gap-3 text-[#a3a396]">
+                            <span class="text-lg">✉</span> orangewedding@gmail.com
                         </a>
-                        <p class="text-slate-400">📍 New South Wales, Australia</p>
+                        <p class="text-[#8e8e82]">📍 New South Wales, Australia</p>
                         <div class="pt-4">
-                            <span class="bg-sky-500/10 text-sky-400 px-4 py-2 rounded-full border border-sky-500/20 text-sm font-medium">
+                            <span class="bg-[#c5b358]/20 text-[#c5b358] px-4 py-2 rounded-full border border-[#c5b358]/30 text-sm font-medium">
                                 Available for Consultation
                             </span>
                         </div>
@@ -59,17 +91,18 @@
                 </div>
             </div>
 
-            <div class="mt-12 pt-8 border-t border-slate-700/50 flex flex-wrap gap-3 justify-center">
-                <span class="text-xs font-mono text-slate-500 uppercase tracking-widest px-3 py-1 bg-slate-800/50 rounded">TypeScript</span>
-                <span class="text-xs font-mono text-slate-500 uppercase tracking-widest px-3 py-1 bg-slate-800/50 rounded">PostgreSQL</span>
-                <span class="text-xs font-mono text-slate-500 uppercase tracking-widest px-3 py-1 bg-slate-800/50 rounded">Node.js</span>
-                <span class="text-xs font-mono text-slate-500 uppercase tracking-widest px-3 py-1 bg-slate-800/50 rounded">React</span>
-                <span class="text-xs font-mono text-slate-500 uppercase tracking-widest px-3 py-1 bg-slate-800/50 rounded">Linux</span>
+            <!-- Tech Stack Tags -->
+            <div class="mt-12 pt-8 border-t border-[#43453b] flex flex-wrap gap-3 justify-center">
+                <span class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#1a1c18] border border-[#3a3d34] rounded">TypeScript</span>
+                <span class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#1a1c18] border border-[#3a3d34] rounded">PostgreSQL</span>
+                <span class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#1a1c18] border border-[#3a3d34] rounded">Node.js</span>
+                <span class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#1a1c18] border border-[#3a3d34] rounded">React</span>
+                <span class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#1a1c18] border border-[#3a3d34] rounded">Linux</span>
             </div>
         </div>
 
-        <footer class="text-center text-slate-500 text-sm">
-            &copy; 2026 Duma Tech. Built with precision.
+        <footer class="text-center text-[#a39e96] text-sm">
+            &copy; 2026 Duma Tech. Engineered for the long haul.
         </footer>
     </main>
 
