@@ -9,14 +9,20 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-        /* Theme Variables */
+        /* New Forest Theme Variables */
         :root {
-            --bg-sand: #e2e2d5;        /* Sage-Sand */
-            --dark-khaki: #1b4332;     /* Deep Forest Green */
-            --deep-charcoal: #0b1a14;  /* Near-black Forest */
-            --accent-gold: #c5b358;    /* Gold */
-            --text-main: #f2e9e4;      /* Soft white text */
-            --text-muted: #95b391;     /* Muted moss green */
+            --bg-sand: #e2e2d5;
+            /* Sage-Sand */
+            --dark-khaki: #1b4332;
+            /* Deep Forest Green */
+            --deep-charcoal: #0b1a14;
+            /* Near-black Forest */
+            --accent-gold: #c5b358;
+            /* Gold */
+            --text-main: #f2e9e4;
+            /* Soft white text */
+            --text-muted: #95b391;
+            /* Muted moss green */
         }
 
         body {
@@ -27,7 +33,7 @@
 
         /* Unified Section Styling */
         .unified-card {
-            background-color: rgba(27, 67, 50, 0.85); 
+            background-color: rgba(27, 67, 50, 0.75);
             border: 1px solid rgba(197, 179, 88, 0.2);
             border-radius: 1.5rem;
             padding: 2rem;
@@ -36,7 +42,7 @@
         }
 
         .gradient-text {
-            background: linear-gradient(90deg, #2d6a4f, #1b4332); 
+            background: linear-gradient(90deg, #2d6a4f, #1b4332);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -60,21 +66,42 @@
             padding: 1rem;
             border: 1px solid #3a3d34;
         }
+
+        /* Project Card Styling with Contrast Sand Background */
+        .project-card {
+            background: #dbc9af;
+            /* Contrast Sand for Light Logos */
+            border: 1px solid rgba(197, 179, 88, 0.4);
+            color: #2d2d2d;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-gold);
+            /* Moves the card up by 8px */
+            transform: translateY(-8px);
+            /* Creates a deeper, wider shadow to simulate height */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            background: #c7b498;
+            /* Subtle color shift on hover */
+        }
     </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center p-6">
 
     <main class="max-w-4xl w-full space-y-10">
-        <header class="text-center space-y-8">
+        <header class="text-center space-y-1">
             <div class="flex justify-center logo-container">
-                <img src="logo.png" alt="Duma Tech Logo" class="h-52 w-auto opacity-95">
+                <img src="logo.png" alt="Duma Tech Logo" class="h-48 w-auto opacity-95">
             </div>
 
             <div class="space-y-2">
-                <h1 class="text-5xl font-bold tracking-tight text-[#433d35]"><span class="gradient-text">Duma Tech</span></h1>
+                <h1 class="text-5xl font-bold tracking-tight text-[#433d35]"><span class="gradient-text">Duma
+                        Tech</span></h1>
                 <p class="text-xl text-[#7a7267] font-light max-w-2xl mx-auto">
-                    Senior Systems Engineer & Full-Stack Developer with 25+ years of experience in architecture, data engineering, and scalable solutions.
+                    Senior Systems Engineer & Full-Stack Developer with 25+ years of experience in architecture, data
+                    engineering, and scalable solutions.
                 </p>
             </div>
         </header>
@@ -83,7 +110,8 @@
             <h2 class="section-header text-center md:text-left">The Partnership Model</h2>
             <div class="space-y-6">
                 <p class="text-[#b5b5a8] leading-relaxed">
-                    Have a specialized web app idea but don't want the ridiculous upfront development cost? I'm looking for industry-specific problems to solve.
+                    Have a specialized web app idea but don't want the $20k+ upfront development cost? I'm looking for
+                    industry-specific problems to solve.
                 </p>
 
                 <div class="grid md:grid-cols-3 gap-4 text-sm">
@@ -111,14 +139,53 @@
         </section>
 
         <section class="unified-card">
+            <h2 class="section-header">Featured Projects</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <a href="https://verisafe.com.au" target="_blank"
+                    class="project-card p-6 rounded-2xl block group space-y-4">
+                    <div class="h-10 flex items-center justify-start">
+                        <img src="Verisafe logo light.png" alt="VeriSafe Logo" class="h-9 w-auto">
+                    </div>
+                    <p class="text-sm text-[#5c564d] group-hover:text-black transition-colors">
+                        Safety compliance and verification platform for high-risk industries.
+                    </p>
+                </a>
+
+                <div class="project-card p-6 rounded-2xl block space-y-4 cursor-default">
+                    <div class="h-10 flex items-center justify-start">
+                        <img src="Pulsepoint_Infinity_BlueGrey_Logo_crop.png" alt="PulsePoint Logo" class="h-10 w-auto">
+                    </div>
+                    <p class="text-sm text-[#5c564d]">
+                        Real-time monitoring and data visualization for systems performance.
+                    </p>
+                </div>
+
+                <a href="https://infinityev.com.au" target="_blank"
+                    class="project-card p-6 rounded-2xl block group space-y-4">
+                    <div class="h-10 flex items-center justify-start">
+                        <img src="InfinityEVlogo_long_dark_cropped.png" alt="InfinityEV Logo" class="h-5 w-auto">
+                    </div>
+                    <p class="text-sm text-[#5c564d] group-hover:text-black transition-colors">
+                        Electric vehicle charging infrastructure and management software.
+                    </p>
+                </a>
+            </div>
+        </section>
+
+        <section class="unified-card">
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
                     <h2 class="section-header">Core Expertise</h2>
                     <ul class="space-y-3">
-                        <li class="flex items-center gap-3"><span class="text-[#c5b358]">▹</span> Computer Systems Engineering</li>
-                        <li class="flex items-center gap-3"><span class="text-[#c5b358]">▹</span> Full-Stack Development (TS / Node / React)</li>
-                        <li class="flex items-center gap-3"><span class="text-[#c5b358]">▹</span> Database Administration & Data Engineering</li>
-                        <li class="flex items-center gap-3"><span class="text-[#c5b358]">▹</span> Linux Server Management & DevOps</li>
+                        <li class="flex items-center gap-3"><span class="text-[#c5b358]">▹</span> Computer Systems
+                            Engineering</li>
+                        <li class="flex items-center gap-3"><span class="text-[#c5b358]">▹</span> Full-Stack Development
+                            (TS / Node / React)</li>
+                        <li class="flex items-center gap-3"><span class="text-[#c5b358]">▹</span> Database
+                            Administration & Data Engineering</li>
+                        <li class="flex items-center gap-3"><span class="text-[#c5b358]">▹</span> Linux Server
+                            Management & DevOps</li>
                     </ul>
                 </div>
 
@@ -126,19 +193,24 @@
                     <h2 class="section-header">Connect</h2>
                     <div class="flex flex-col gap-4">
                         <div class="flex items-center gap-3">
-                            <svg class="w-5 h-5 opacity-80" style="color: var(--text-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            <svg class="w-5 h-5 opacity-80" style="color: var(--text-muted)" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                             </svg>
                             <span class="font-semibold text-lg text-white">Tony Garner</span>
                         </div>
-                        <a href="mailto:orangewedding@gmail.com" class="hover:text-[#c5b358] transition-colors flex items-center gap-3" style="color: var(--text-muted)">
+                        <a href="mailto:orangewedding@gmail.com"
+                            class="hover:text-[#c5b358] transition-colors flex items-center gap-3"
+                            style="color: var(--text-muted)">
                             <span class="text-xl">✉</span> orangewedding@gmail.com
                         </a>
                         <p class="text-[#8e8e82] flex items-center gap-3">
                             <span class="text-lg">📍</span> New South Wales, Australia
                         </p>
                         <div class="pt-4">
-                            <span class="bg-[#c5b358]/20 text-[#c5b358] px-4 py-2 rounded-full border border-[#c5b358]/30 text-sm font-medium">
+                            <span
+                                class="bg-[#c5b358]/20 text-[#c5b358] px-4 py-2 rounded-full border border-[#c5b358]/30 text-sm font-medium">
                                 Available for Consultation
                             </span>
                         </div>
@@ -147,11 +219,16 @@
             </div>
 
             <div class="mt-12 pt-8 border-t border-[#43453b] flex flex-wrap gap-3 justify-center">
-                <span class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#0b1a14] border border-[#3a3d34] rounded">TypeScript</span>
-                <span class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#0b1a14] border border-[#3a3d34] rounded">PostgreSQL</span>
-                <span class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#0b1a14] border border-[#3a3d34] rounded">Node.js</span>
-                <span class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#0b1a14] border border-[#3a3d34] rounded">React</span>
-                <span class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#0b1a14] border border-[#3a3d34] rounded">Linux</span>
+                <span
+                    class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#0b1a14] border border-[#3a3d34] rounded">TypeScript</span>
+                <span
+                    class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#0b1a14] border border-[#3a3d34] rounded">PostgreSQL</span>
+                <span
+                    class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#0b1a14] border border-[#3a3d34] rounded">Node.js</span>
+                <span
+                    class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#0b1a14] border border-[#3a3d34] rounded">React</span>
+                <span
+                    class="text-xs font-mono text-[#8e8e82] uppercase tracking-widest px-3 py-1 bg-[#0b1a14] border border-[#3a3d34] rounded">Linux</span>
             </div>
         </section>
 
