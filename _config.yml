@@ -1,0 +1,23 @@
+# Site Settings
+title: Duma Tech
+url: "https://dumatech.com.au" # Update this to your actual URL
+baseurl: "" # This should match your Repo Name
+markdown: kramdown
+email: tony@verisafe.com.au # Update this to your actual email
+description: >- # This helps with Google search results
+  Duma Tech provides modern software engineering, and various tech solutions.
+
+# Build Settings
+# theme: minima # Or leave blank if using your custom styles
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude these files from the final website build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - vendor
